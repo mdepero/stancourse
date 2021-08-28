@@ -1,5 +1,10 @@
 
 
+// globals
+const cname = "stanstoken"
+
+
+
 // cookie functions:
 // https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript
 function setCookie(name,value,days) {
