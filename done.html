@@ -4,12 +4,16 @@ layout: app
 
 <script type="text/javascript">
 
+  function redirect(stoken) {
+    window.location.replace("mattdepero.com/?done&test="+stoken);
+  }
+
   stoken = getCookie(cname);
 
   if(!stoken) {
     alert("error: you never set the token before opening the 'done' page.");
   } else {
-    alert("successfully got the token back: " + stoken);
+    redirect(stoken)
   }
 
 </script>
