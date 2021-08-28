@@ -1,0 +1,30 @@
+---
+layout: app
+---
+
+<script type="text/javascript">
+
+  function redirect() {
+    window.location.replace("https://rise.articulate.com/share/-Va1nWk8E1kIcIVKzWxDHgOB59PRia9a");
+  }
+
+  const cname = "stanstoken"
+  const pname = "t"
+
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  if(!urlParams.has(pname)) {
+    if getCookie(cname) {
+      redirect()
+    } else {
+      alert("no token present, did not open this page from a valid link")
+    }
+  } else {
+    stoken = urlParams.get(pname)
+    setCookie(cname, stoken, 1)
+    redirect()
+  }
+
+</script>

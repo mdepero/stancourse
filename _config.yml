@@ -1,0 +1,6 @@
+# site settings
+title: Misinformation Cource
+
+# build settings
+markdown: kramdown
+permalink: pretty

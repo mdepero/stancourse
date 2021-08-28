@@ -1,0 +1,15 @@
+---
+layout: app
+---
+
+<script type="text/javascript">
+
+  stoken = getCookie("stoken");
+
+  if(!stoken) {
+    alert("error: you never set the token before opening the 'done' page.");
+  } else {
+    alert("successfully got the token back: " + stoken);
+  }
+
+</script>
