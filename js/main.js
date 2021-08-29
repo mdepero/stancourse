@@ -5,8 +5,8 @@ const cname = "stanstoken"
 
 
 function showErr(msg){
-    alert(msg);
     document.getElementById('error').innerHTML = msg;
+    alert(msg);
 }
 
 // cookie functions:
