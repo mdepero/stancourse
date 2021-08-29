@@ -11,7 +11,7 @@ layout: app
   stoken = getCookie(cname);
 
   if(!stoken) {
-    alert("error: you never set the token before opening the 'done' page.");
+    showErr("error: you never set the token before opening the 'done' page.");
   } else {
     redirect(stoken)
   }
