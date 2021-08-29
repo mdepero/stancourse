@@ -31,3 +31,14 @@ function getCookie(name) {
 function eraseCookie(name) {   
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
+
+// detect cookie functionality:
+// https://stackoverflow.com/questions/4603289/how-to-detect-that-javascript-and-or-cookies-are-disabled
+function checkCookie(onFailFunc){
+    var cookieEnabled = navigator.cookieEnabled;
+    if (!cookieEnabled){ 
+        document.cookie = "testcookie";
+        cookieEnabled = document.cookie.indexOf("testcookie")!=-1;
+    }
+    return cookieEnabled || onFailFunc();
+}
