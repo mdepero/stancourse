@@ -22,7 +22,7 @@ layout: app
         showErr("error: no token present; did not open this page from a valid link");
       }
     } else {
-      if !checkCookie() {
+      if(!checkCookie()) {
         showErr("error: your browser does not support cookies and/or javascript. you must use a different browser.");
       } else {
         stoken = urlParams.get(pname);
