@@ -4,6 +4,10 @@
 const cname = "stanstoken"
 
 
+function showErr(msg){
+    alert(msg);
+    document.getElementById('error').innerHTML = msg;
+}
 
 // cookie functions:
 // https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript
