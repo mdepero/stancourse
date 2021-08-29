@@ -38,11 +38,11 @@ function eraseCookie(name) {
 
 // detect cookie functionality:
 // https://stackoverflow.com/questions/4603289/how-to-detect-that-javascript-and-or-cookies-are-disabled
-function checkCookie(onFailFunc){
+function checkCookie(){
     var cookieEnabled = navigator.cookieEnabled;
     if (!cookieEnabled){ 
         document.cookie = "testcookie";
         cookieEnabled = document.cookie.indexOf("testcookie")!=-1;
     }
-    return cookieEnabled || onFailFunc();
+    return cookieEnabled;
 }
